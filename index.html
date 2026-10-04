@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blocky Runner</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="app">
+<canvas id="c" width="480" height="720"></canvas>
+<div id="hud"><span id="hs">Speed 0</span><span id="ht">0.0s</span><span id="hd"></span></div>
+<div id="ctl"><div class="lr"><button id="bl">◀</button><button id="br">▶</button></div><button id="bj">▲</button></div>
+
+<div class="screen on" id="menu">
+<h1>BLOCKY RUNNER</h1>
+<canvas id="pv" width="120" height="150" style="width:90px;height:112px"></canvas>
+<input id="nm" maxlength="12" placeholder="Your name">
+<div class="row"><label>Difficulty<select id="df"><option value="0">Easy</option><option value="1">Mid</option><option value="2">Hard</option></select></label></div>
+<div class="row"><button id="play">PLAY</button><button class="alt" id="cust">Customize</button><button class="alt" id="lb">Leaderboard</button></div>
+<small>Keys: ← → to switch lane, Space/↑ to jump. Reach speed 100 to finish!</small>
+</div>
+
+<div class="screen" id="custom">
+<h1>CHARACTER</h1>
+<canvas id="pv2" width="160" height="200" style="width:120px;height:150px"></canvas>
+<div class="row"><label>Body<select id="gd"><option value="m">Male</option><option value="f">Female</option></select></label>
+<label>Hair<input type="color" id="ch"></label><label>Skin<input type="color" id="cs"></label>
+<label>Shirt<input type="color" id="csh"></label><label>Pants<input type="color" id="cp"></label></div>
+<button id="cdone">Done</button>
+</div>
+
+<div class="screen" id="end">
+<h1 id="et"></h1><div id="es"></div>
+<ol id="el"></ol>
+<div class="row"><button id="again">Play again</button><button class="alt" id="tomenu">Menu</button></div>
+</div>
+
+<div class="screen" id="board"><h1>LEADERBOARD</h1><ol id="bl2"></ol><button id="bback">Back</button></div>
+</div>
+
+<script src="game.js"></script></body></html>
